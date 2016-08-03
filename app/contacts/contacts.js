@@ -90,14 +90,14 @@ angular.module('myContacts.contacts', ['ngRoute','firebase'])
 		record.address[0].zipcode 			= $scope.zipcode;
 
     $scope.contacts.$save(record).then(function(ref){
-      console.log(ref.key);
+      // console.log(ref.key);
     })
     clearFields();
     $scope.editFormShow = false;
     $scope.msg = "contact updated";
   }
   $scope.showContact = function(contact){
-    console.log("gettin contact ...");
+    // console.log("gettin contact ...");
     $scope.name = contact.name;
     $scope.email = contact.email;
     $scope.company = contact.company;
@@ -112,9 +112,9 @@ angular.module('myContacts.contacts', ['ngRoute','firebase'])
     $scope.contactShow = true;
   }
   $scope.removeContact = function(contact){
-    console.log("removing contact");
+    // console.log("removing contact");
     $scope.contacts.$remove(contact);
-    console.log("contact removed");
+    // console.log("contact removed");
   }
   function clearFields(){
 		console.log('Clearing All Fields...');
